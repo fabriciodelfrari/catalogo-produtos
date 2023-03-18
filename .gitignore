@@ -1,0 +1,18 @@
+﻿################################################################################
+# Este arquivo .gitignore foi criado automaticamente pelo Microsoft(R) Visual Studio.
+################################################################################
+
+/CatalogAPI/.vs
+/CatalogAPI/.vscode
+/CatalogAPI/CatalogAPI.API/bin/Debug/net7.0
+/CatalogAPI/CatalogAPI.API/obj
+/CatalogAPI/CatalogAPI.Domain/bin/Debug/net7.0
+/CatalogAPI/CatalogAPI.Domain/obj
+/CatalogAPI/CatalogAPI.Domain.Application/bin/Debug/net7.0
+/CatalogAPI/CatalogAPI.Domain.Application/obj
+/CatalogAPI/CatalogAPI.Domain.Tests/bin/Debug/net7.0
+/CatalogAPI/CatalogAPI.Domain.Tests/obj
+/CatalogAPI/CatalogAPI.Infra.Data/bin/Debug/net7.0
+/CatalogAPI/CatalogAPI.Infra.Data/obj
+/CatalogAPI/CatalogAPI.Infra.IoC/bin/Debug/net7.0
+/CatalogAPI/CatalogAPI.Infra.IoC/obj
