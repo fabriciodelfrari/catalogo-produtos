@@ -25,6 +25,7 @@ namespace CatalogAPI.Infra.Data.Configurations.Entities
                 .IsRequired();
 
             builder.Property(p => p.UrlImage)
+                .HasMaxLength(250)
                 .IsRequired(false);
 
 
