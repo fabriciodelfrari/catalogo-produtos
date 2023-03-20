@@ -1,6 +1,6 @@
-﻿
-using CatalogAPI.Domain.Interfaces;
+﻿using CatalogAPI.Domain.Interfaces;
 using CatalogAPI.Infra.Data.Context;
+using CatalogAPI.Domain.Application.Mappings;
 using CatalogAPI.Infra.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -20,6 +20,7 @@ namespace CatalogAPI.Infra.IoC
 
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddAutoMapper(typeof(ProfileConfiguration));
 
             return services;
         }
