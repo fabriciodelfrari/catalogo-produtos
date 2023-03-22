@@ -1,4 +1,3 @@
-
 using CatalogAPI.Infra.IoC;
 
 var builder = WebApplication.CreateBuilder(args);

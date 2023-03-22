@@ -9,8 +9,8 @@ namespace CatalogAPI.Domain.Application.Mappings
     {
         public ProfileConfiguration()
         {
-            CreateMap<Product, ProductDTO>();
-            CreateMap<Category, CategoryDTO>();
+            CreateMap<Product, ProductDTO>().ReverseMap();
+            CreateMap<Category, CategoryDTO>().ReverseMap();
         }
     }
 }
