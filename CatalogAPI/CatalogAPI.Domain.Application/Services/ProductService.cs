@@ -44,9 +44,11 @@ namespace CatalogAPI.Domain.Application.Services
 
         }
 
-        public async Task UpdateAsync(ProductDTO productDTO)
+        public async Task<ProductDTO> UpdateAsync(ProductDTO productDTO)
         {
-            await _productRepository.UpdateAsync(_mapper.Map<Product>(productDTO));
+            var product = await _productRepository.UpdateAsync(_mapper.Map<Product>(productDTO));
+
+            return _mapper.Map<ProductDTO>(product);
         }
     }
 }

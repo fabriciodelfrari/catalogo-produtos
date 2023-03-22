@@ -29,8 +29,21 @@ namespace CatalogAPI.API.Controllers
             {
                 return BadRequest(ex.Message);
             }
+        }
 
+        [HttpGet("GetProductById/{id}")]
+        public async Task<ActionResult<ProductDTO>> GetProductById(int id)
+        {
+            try
+            {
+                var product = await _productService.GetByIdAsync(id);
 
+                return product;
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpPost("RegisterProduct")]
@@ -48,5 +61,34 @@ namespace CatalogAPI.API.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpPut("UpdateProduct")]
+        public async Task<ActionResult<ProductDTO>> UpdateProduct(ProductDTO productDTO)
+        {
+            try
+            {
+                return await _productService.UpdateAsync(productDTO);
+            }
+            catch(Exception ex)
+            {
+                return BadRequest($"{ex.Message}: {ex.InnerException!.Message}");
+            }
+        }
+
+        [HttpDelete("RemoveProduct/{id}")]
+        public async Task<ActionResult> RemoveProduct(int id)
+        {
+            try
+            {
+                await _productService.RemoveAsync(id);
+
+                return Ok();
+            }
+            catch(Exception ex)
+            {
+                return BadRequest($"{ex.Message}: {ex.InnerException!.Message}");
+            }
+        }
+
     }
 }

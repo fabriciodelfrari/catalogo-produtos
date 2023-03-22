@@ -12,7 +12,7 @@ namespace CatalogAPI.Domain.Application.Interfaces
         Task AddAsync(ProductDTO productDTO);
         Task<ProductDTO> GetByIdAsync(int id);
         Task<IEnumerable<ProductDTO>> GetProductsAsync();
-        Task UpdateAsync(ProductDTO productDTO);
+        Task<ProductDTO> UpdateAsync(ProductDTO productDTO);
         Task RemoveAsync(int id);
     }
 }
