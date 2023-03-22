@@ -82,7 +82,7 @@ namespace CatalogAPI.API.Controllers
             {
                 await _productService.RemoveAsync(id);
 
-                return Ok();
+               return Ok();
             }
             catch(Exception ex)
             {
