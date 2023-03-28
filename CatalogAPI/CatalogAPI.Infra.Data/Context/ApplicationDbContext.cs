@@ -1,9 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
-using CatalogAPI.Domain.Entities;
+﻿using CatalogAPI.Domain.Entities;
+using CatalogAPI.Infra.Data.Identity;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace CatalogAPI.Infra.Data.Context
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) 
             : base(options)
