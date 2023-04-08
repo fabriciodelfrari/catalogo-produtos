@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using CatalogAPI.Domain.Application.DTOs;
 using CatalogAPI.Domain.Application.Interfaces;
-using CatalogAPI.Domain.Entities;
 using CatalogAPI.Domain.Interfaces;
+using CatalogAPI.Domain.Model.Entities;
 
 namespace CatalogAPI.Domain.Application.Services
 {

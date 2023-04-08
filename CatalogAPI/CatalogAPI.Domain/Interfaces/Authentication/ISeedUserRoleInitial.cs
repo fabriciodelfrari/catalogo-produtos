@@ -1,7 +1,7 @@
 ﻿
 namespace CatalogAPI.Domain.Interfaces.Authentication
 {
-    public class ISeedUserRoleInitial
+    public interface ISeedUserRoleInitial
     {
         void SeedUsers();
         void SeedRoles();

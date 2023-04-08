@@ -1,7 +1,7 @@
-﻿using CatalogAPI.Domain.Entities;
-using CatalogAPI.Infra.Data.Identity;
+﻿using CatalogAPI.Infra.Data.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using CatalogAPI.Domain.Model.Entities;
 
 namespace CatalogAPI.Infra.Data.Context
 {

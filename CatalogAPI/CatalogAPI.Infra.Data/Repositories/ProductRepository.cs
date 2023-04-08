@@ -1,5 +1,5 @@
-﻿using CatalogAPI.Domain.Entities;
-using CatalogAPI.Domain.Interfaces;
+﻿using CatalogAPI.Domain.Interfaces;
+using CatalogAPI.Domain.Model.Entities;
 using CatalogAPI.Infra.Data.Context;
 using Microsoft.EntityFrameworkCore;
 

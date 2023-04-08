@@ -1,5 +1,4 @@
-﻿
-using CatalogAPI.Domain.Entities;
+﻿using CatalogAPI.Domain.Model.Entities;
 
 namespace CatalogAPI.Domain.Interfaces
 {
