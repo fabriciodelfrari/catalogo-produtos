@@ -1,6 +1,6 @@
 ﻿using CatalogAPI.Domain.Validation;
 
-namespace CatalogAPI.Domain.Entities
+namespace CatalogAPI.Domain.Model.Entities
 {
     public sealed class Category : Entity
     {

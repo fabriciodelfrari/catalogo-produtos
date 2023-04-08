@@ -1,11 +1,13 @@
 ﻿using CatalogAPI.Domain.Application.DTOs;
 using CatalogAPI.Domain.Application.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CatalogAPI.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class ProductController : ControllerBase
     {
         private readonly IProductService _productService;
@@ -74,21 +76,5 @@ namespace CatalogAPI.API.Controllers
                 return BadRequest($"{ex.Message}: {ex.InnerException!.Message}");
             }
         }
-
-        [HttpDelete("RemoveProduct/{id}")]
-        public async Task<ActionResult> RemoveProduct(int id)
-        {
-            try
-            {
-                await _productService.RemoveAsync(id);
-
-               return Ok();
-            }
-            catch(Exception ex)
-            {
-                return BadRequest($"{ex.Message}: {ex.InnerException!.Message}");
-            }
-        }
-
     }
 }

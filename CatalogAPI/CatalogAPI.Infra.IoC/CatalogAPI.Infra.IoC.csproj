@@ -13,6 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\CatalogAPI.Domain.Application\CatalogAPI.Domain.Application.csproj" />
     <ProjectReference Include="..\CatalogAPI.Domain\CatalogAPI.Domain.csproj" />
+    <ProjectReference Include="..\CatalogAPI.Infra.CrossCutting.Authentication\CatalogAPI.Infra.CrossCutting.Authentication.csproj" />
     <ProjectReference Include="..\CatalogAPI.Infra.Data\CatalogAPI.Infra.Data.csproj" />
   </ItemGroup>
 
