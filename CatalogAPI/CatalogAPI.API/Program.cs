@@ -1,8 +1,10 @@
+using CatalogAPI.Infra.Data.Configurations.Migration;
 using CatalogAPI.Infra.IoC;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddInfra(builder.Configuration);
+
 
 // Add services to the container.
 builder.Services.AddControllers();
@@ -21,10 +23,17 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors();
+
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 
 app.MapControllers();
+
+//realizar um update database caso necessário
+app.UseMigrations();
 
 app.Run();

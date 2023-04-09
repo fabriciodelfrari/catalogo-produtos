@@ -1,6 +1,6 @@
 ﻿using CatalogAPI.Domain.Validation;
 
-namespace CatalogAPI.Domain.Entities
+namespace CatalogAPI.Domain.Model.Entities
 {
     public sealed class Product : Entity
     {
@@ -58,7 +58,7 @@ namespace CatalogAPI.Domain.Entities
             DomainExceptionValidation.When(stock < 0,
             "Invalid Stock. Stock can't have a negative value.");
 
-            DomainExceptionValidation.When(urlImage.Trim().Length <=0 || urlImage.Trim().Length > 250,
+            DomainExceptionValidation.When(urlImage.Trim().Length <= 0 || urlImage.Trim().Length > 250,
             "Invalid image URL: url must not be empty or has more than 250 characters."); ;
 
         }

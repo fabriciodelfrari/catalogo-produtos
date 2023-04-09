@@ -1,4 +1,4 @@
-﻿using CatalogAPI.Domain.Entities;
+﻿using CatalogAPI.Domain.Model.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

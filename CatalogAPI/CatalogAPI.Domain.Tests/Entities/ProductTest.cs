@@ -1,4 +1,4 @@
-﻿using CatalogAPI.Domain.Entities;
+﻿using CatalogAPI.Domain.Model.Entities;
 using CatalogAPI.Domain.Validation;
 using FluentAssertions;
 

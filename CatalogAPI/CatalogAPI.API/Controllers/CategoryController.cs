@@ -1,11 +1,13 @@
 ﻿using CatalogAPI.Domain.Application.DTOs;
 using CatalogAPI.Domain.Application.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CatalogAPI.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class CategoryController : ControllerBase
     {
         private readonly ICategoryService _categoryService;
@@ -15,7 +17,7 @@ namespace CatalogAPI.API.Controllers
             _categoryService = categoryService;
         }
 
-        [HttpGet]
+        [HttpGet("GetAll")]
         public async Task<ActionResult<IEnumerable<CategoryDTO>>> GetAllCategories()
         {
             try
