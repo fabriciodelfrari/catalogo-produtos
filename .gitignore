@@ -16,3 +16,5 @@
 /CatalogAPI/CatalogAPI.Infra.Data/obj
 /CatalogAPI/CatalogAPI.Infra.IoC/bin/Debug/net7.0
 /CatalogAPI/CatalogAPI.Infra.IoC/obj
+/CatalogAPI/CatalogAPI.Infra.CrossCutting.Authentication/obj
+/CatalogAPI/CatalogAPI.Infra.CrossCutting.Authentication/bin
